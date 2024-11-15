@@ -1,0 +1,219 @@
+/* General styles for the form */
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles for section with id 'welcome' */
+#welcome {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styles for section with id 'form' */
+#form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Styles for all the sections */
+section {
+  margin-bottom: 20px;
+}
+
+/* Styles for all the labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Styles for sections with class 'inputs' */
+.inputs {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Styles for section with id 'file-upload' */
+#file-upload {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Styles for sections with class 'radio-group' */
+.radio-group {
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Styles for sections with class 'radio-group' and radio's inputs with class 'radios' */
+.radio-group .radios {
+  margin-right: 5px;
+}
+
+/* Styles for sections with class 'radio-group' and labels */
+.radio-group label {
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+/* Styles for section with id 'phone-number' */
+#phone-number {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for section with id 'phone-prefix' */
+#phone-prefix {
+  width: 50px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Styles for section with id 'phone' */
+#phone {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Styles for all the textareas */
+textarea {
+  resize: vertical;
+  height: 100px;
+  font-size: 14px;
+}
+
+/* Styles for button with id 'button' */
+#button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Button hover */
+#button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for footer */
+footer {
+  display: flex;
+  justify-content: end;
+}
+
+/* Styles for the confirm page button */
+#repeat-form {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#repeat-button {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#repeat-button:hover {
+  background-color: #0056b3;
+}
+
+#repeat-button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Styles for section with id 'confirmation-header' */
+#confirmation-header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  #form {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  .inputs {
+    font-size: 12px;
+    padding: 8px;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  #file-upload {
+    font-size: 12px;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  textarea {
+    font-size: 12px;
+    padding: 8px;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .radio-group label {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  #button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  footer {
+    text-align: right;
+    padding: 10px;
+  }
+}

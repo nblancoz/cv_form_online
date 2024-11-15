@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creation of a Curriculum Vitae Online</title>
+    <!-- Styles & Google Fonts linked -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -> Welcome the user - Brief description of the purpose of the web -->
+    <header>
+      <section id="welcome">
+        <h1>Hello!</h1>
+        <p>
+          This web page consists of the creation of a 'Curriculum Vitae'. Here
+          you must introduce some data for the creation of it.
+        </p>
+      </section>
+    </header>
+    <!-- Form to save the user's data -->
+    <form action="./confirmation-page.html" id="form">
+      <!-- File input to upload the profile picture -->
+      <section id="personal-info">
+        <h2>Profile Picture</h2>
+        <label for="profile-picture">Upload your profile picture</label>
+        <input
+          id="file-upload"
+          type="file"
+          accept="image/*"
+          aria-label="Profile Picture"
+        />
+        <!-- Button to remove the uploaded file -->
+        <button type="button" id="remove-file">Remove file</button>
+      </section>
+      <!-- Brief introduction of the next's seccions -->
+      <section id="personal-info">
+        <h2>Personal Information</h2>
+        <p>
+          Please introduce your personal information in the following form. This
+          information will be used for the creation of your Curriculum Vitae.
+        </p>
+        <label for="name">Name</label>
+        <input
+          id="name"
+          class="inputs"
+          type="text"
+          placeholder="Enter your name"
+          aria-label="Name"
+          required
+          autofocus
+        />
+        <label for="last-name">Last Name</label>
+        <input
+          id="last-name"
+          class="inputs"
+          type="text"
+          placeholder="Enter your last name"
+          aria-label="Last Name"
+          required
+        />
+        <article id="gender">
+          <label for="gender">Gender</label>
+          <section class="radio-group">
+            <input
+              id="gender-male"
+              class="radios"
+              name="gender"
+              type="radio"
+              value="male"
+              aria-label="Male"
+              required
+            />
+            <label for="gender-male">Male</label>
+          </section>
+          <section class="radio-group">
+            <input
+              id="gender-female"
+              class="radios"
+              name="gender"
+              type="radio"
+              value="female"
+              aria-label="Female"
+              required
+            />
+            <label for="gender-female">Female</label>
+          </section>
+        </article>
+      </section>
+      <section id="birth-date">
+        <label for="date">Birth Date</label>
+        <input
+          type="date"
+          id="date"
+          class="inputs"
+          required
+          max=""
+          aria-label="Birth Date"
+        />
+      </section>
+      <section id="contact-info">
+        <label for="email">Email</label>
+        <!-- Email input with validations & error message -->
+        <input
+          id="email"
+          class="inputs"
+          type="email"
+          placeholder="Enter your email"
+          aria-label="Email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Please enter a valid email address"
+        />
+        <label for="phone">Phone Number</label>
+        <section id="phone-number">
+          <input
+            id="phone-prefix"
+            class="inputs"
+            type="text"
+            value="+34"
+            aria-label="Prefix"
+            disabled
+          />
+          <!-- Phone number input with validations & error message - The user cannot writte letters, only numbers -->
+          <input
+            id="phone"
+            class="inputs"
+            type="tel"
+            placeholder="Enter your phone number"
+            aria-label="Phone Number"
+            required
+            inputmode="numeric"
+            oninput="this.value = this.value.replace(/[^0-9\s]/g, '')"
+            pattern="\d{3}\s?\d{2}\s?\d{2}\s?\d{2}"
+            title="Please enter a valid phone number in the format: 123 45 67 89"
+          />
+        </section>
+      </section>
+      <section id="address">
+        <label for="address">Address</label>
+        <input
+          id="address"
+          class="inputs"
+          type="text"
+          placeholder="Enter your address"
+          aria-label="Address"
+          required
+        />
+      </section>
+      <section id="summary">
+        <label for="summary">Summary</label>
+        <!-- TextArea with maximum length -->
+        <textarea
+          id="summary"
+          class="inputs"
+          placeholder="Enter a brief summary about yourself. Maximum 750 characters."
+          aria-label="Summary"
+          required
+          maxlength="750"
+        ></textarea>
+      </section>
+      <section id="experience">
+        <label for="experience">Experience</label>
+        <!-- TextArea with maximum length -->
+        <textarea
+          id="experience"
+          class="inputs"
+          placeholder="Enter your experience. Maximum 1000 characters."
+          aria-label="Experience"
+          required
+          maxlength="1000"
+        ></textarea>
+      </section>
+      <section id="education">
+        <label for="education">Education</label>
+        <!-- TextArea with maximum length -->
+        <textarea
+          id="education"
+          class="inputs"
+          placeholder="List your education history. Maximum 1000 characters."
+          aria-label="Education"
+          maxlength="1000"
+        ></textarea>
+      </section>
+      <section id="skills">
+        <label for="skills">Skills</label>
+        <!-- TextArea with maximum length -->
+        <textarea
+          id="skills"
+          class="inputs"
+          placeholder="List your skills. Maximum 750 characters."
+          aria-label="Skills"
+          maxlength="750"
+        ></textarea>
+      </section>
+      <section id="languages">
+        <label for="languages">Languages</label>
+        <!-- TextArea with maximum length -->
+        <textarea
+          id="languages"
+          class="inputs"
+          placeholder="List the languages you know and your proficiency level (e.g., English - Advanced)."
+          aria-label="Languages"
+          maxlength="500"
+        ></textarea>
+      </section>
+      <!-- Submit the form -->
+      <button id="button" type="submit">Submit</button>
+    </form>
+  </body>
+  <footer>
+    <!-- Licence -->
+    <p>
+      Form done by: Nicolás Blanco Zappalá. Trimestral Activity 1: 'Lenguajes de
+      Marcas'. 2024
+    </p>
+  </footer>
+  <!-- Short script done with JavaScript -->
+  <script>
+    // Validation that ensure to put a valid date on the date input - The user cannot enter a date after than today's date
+    document.getElementById("date").max = new Date()
+      .toISOString()
+      .split("T")[0];
+    // Remove the file uploaded
+    document
+      .getElementById("remove-file")
+      .addEventListener("click", function () {
+        document.getElementById("file-upload").value = "";
+      });
+  </script>
+</html>
